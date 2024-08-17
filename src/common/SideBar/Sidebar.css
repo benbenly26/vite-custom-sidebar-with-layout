@@ -1,0 +1,90 @@
+/* Sidebar base styles */
+.sidebar {
+    width: 50px;
+    border: 1px solid #d9d9d9;
+    transition: width 0.8s ease;
+    background-color: #ffffff;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  
+  .sidebar.open {
+    width: 250px;
+  }
+  
+  .sidebar:not(.open):hover {
+    width: 250px;
+  }
+  
+  .page {
+    margin-left: 50px;
+    transition: margin-left 0.3s ease;
+  }
+  
+  .sidebar.open + .page,
+  .sidebar:not(.open):hover + .page {
+    margin-left: 250px;
+  }
+  
+  /* Sidebar header styles */
+  .sidebar header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    background-color: white;
+  }
+  
+  .sidebar-burger {
+    background-color: white;
+    border: none;
+    color: black;
+    font-size: 24px;
+    cursor: pointer;
+    margin-bottom: 10px;
+  }
+  
+  .sidebar-title {
+    font-size: 18px;
+    text-align: center;
+    color: black;
+  }
+  
+  /* Sidebar nav button styles */
+  .nav-item button {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+    border: none;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .nav-item i {
+    margin-right: 10px;
+  }
+  
+  .nav-item:hover button {
+    background-color: #f1f1f1cf;
+  }
+  
+  .nav-item.active button {
+    background-color: green;
+    color: white;
+  }
+  
+  .nav-item.active i,
+  .nav-item.active span {
+    color: white;
+  }
+  
+  i {
+    font-size: 20px;
+  }
+  
